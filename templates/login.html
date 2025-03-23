@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/static/css/login.css">
+    
+    <title>Login Page</title>
+
+
+     <!-- ===== CSS =====  -->
+</head>
+<body>
+    <!--
+
+    <div class="center">
+    <div class="form login">
+        <span class="title">Login</span>
+
+        <form action="{{url_for('login')}}", method="POST">
+            <div class="msg">{{msg}}</div>
+            <div class="input-field">
+                <input type="text" name="username" placeholder="Enter your email" required >
+                <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+                <input type="password" class="password" name="password" placeholder="Enter your password" required>
+                <i class="uil uil-lock icon"></i>
+                <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+
+
+            <div class="input-field button">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+        <a href="{{url_for('register')}}">New user? Register</a>
+        
+    </div>-->
+   <!-- <div class="center">
+    <form action="{{url_for('login')}}", method="POST">
+        <div class="msg">{{msg}}</div>
+    <div class="box">
+        
+            <span class="text-center">login</span>
+        <div class="input-container">
+            <input type="text"name="username"  required=""/>
+            <label>User name</label>		
+        </div>
+        <div class="input-container">		
+            <input type="Password"name="password"  required=""/>
+            <label>Password</label>
+        </div>
+            <button type="submit" class="btn" value="Login">submit</button>
+            <a href="{{url_for('register')}}">New user? Register</a>
+            
+    </form>	
+    </div>
+
+    </div>
+</div>-->
+<div class="login-box">
+    <h2>Login</h2>
+    <form action="{{url_for('login')}}", method="POST">
+        <div class="msg">{{msg}}</div>
+
+      <div class="user-box">
+        <input type="text" name="username" required="">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="password" required="">
+        <label>Password</label>
+      </div>
+      <button type="submit" class="btn" value="Login">submit</button>
+      <a href="{{url_for('register')}}">New user? Register</a>
+    </form>
+  </div>
+</body>
+</html>

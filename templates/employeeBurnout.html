@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/emp.css">
+    <title>Employee Burnout Prediction</title>
+</head>
+<body>
+    <style> body { border: inset 10px;margin:20px auto;width:700;height:700;text-align: center} </style>
+    <h2>Employee Burnout Prediction</h2>
+    <form action="{{url_for('burnout')}}" method="POST">
+
+        <div class="msg">
+            <h5>The Employee is : {{msg}}</h5>
+        </div>
+
+        <div class="ans">
+            <h2>Rating : {{ans}}/3</h2>
+        </div>
+
+        <p>
+            If Rating = 0 ---> Most likely to experience extremely higher workload, stress and anxiety, dislikes working in your Organization<br>
+            If rating = 1 ---> Most likely to experience significant workload, stress and anxiety, unhappy with the working conditions<br>
+            If rating = 2 ---> Most likely to experience managable  workload but still suffers from stress and anxiety levels, alright with working culture.<br>
+            If rating = 3 ---> Most likely to enjoy working in your organization!<br>
+        </p>
+
+        <table border="0" align="center">
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td><label for="eval">Evaluation: </label></td>
+                <td><input id="eval" maxlength="50" name="eval" placeholder="Ex: (0.22, 0.55)" type="text" /></td>
+            </tr>
+    
+            <tr>
+                <td><label for="pcount">Project Count: </label></td>
+                <td><input id="pcount" maxlength="50" name="pcount" placeholder="Ex: (1,4,7)" type="text" /></td>
+            </tr>
+    
+            <tr>
+                <td><label for="avghrs">Average Monthly Hours: </label></td>
+                <td><input id="avghrs" maxlength="50" name="avghrs" placeholder="Ex: (157, 262)" type="text" /></td>
+            </tr>
+    
+            <tr>
+                <td><label for="workingYrs">Years At Company: </label></td>
+                <td><input id="workingYrs" maxlength="50" name="workingYrs" placeholder="Ex: (1,7,10)" type="text" /></td>
+            </tr>
+    
+            <tr>
+                <td><label for="accidents">Work Accidents: </label></td>
+                <td><input id="accidents" maxlength="50" name="accidents" placeholder="Yes: 1, No: 0" type="text" /></td>
+            </tr>
+    
+            <tr>
+                <td><label for="turnover">Likely to leave?:</label></td>
+                <td><input id="turnover" maxlength="50" name="turnover" placeholder="Yes : 1, No : 0" type="text" /></td>
+            </tr>
+    
+            <tr>
+                <td><label for="promotion">Promotion:</label></td>
+                <td><input id="promotion" maxlength="50" name="promotion" placeholder="Yes: 1, No: 0" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Salary: </td>
+                <td>Low <input type ="radio" name ="salary" value="0"/></td>
+                <td>Medium <input type="radio" name="salary" value ="1"/></td>
+                <td>High <input type="radio" name="salary" value ="2"/></td>
+            </tr>
+
+            <tr>
+                <td>Department: </td>
+                <td>Accounting <input type ="radio" name ="dept" value="0"/></td>
+                <td>HR <input type="radio" name="dept" value ="1"/></td>
+                <td>IT <input type="radio" name="dept" value ="2"/></td>
+                <td>Management <input type ="radio" name ="dept" value="3"/></td>
+                <td>Marketing <input type="radio" name="dept" value ="4"/></td>
+                <td>Product Management <input type="radio" name="dept" value ="5"/></td>
+                <td>R&D <input type ="radio" name ="dept" value="6"/></td>
+                <td>Sales <input type="radio" name="dept" value ="7"/></td>
+                <td>Support <input type="radio" name="dept" value ="8"/></td>
+                <td>Technical <input type="radio" name ="dept" value="9"/></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>&nbsp;&nbsp;&nbsp;<input name="Submit" type="Submit" value="Submit!" /></td>
+            </tr>
+            
+        </tbody>
+    </table>
+        </form>
+    
+    <a href="{{url_for('about')}}">Home</a>
+</body>
+</html>

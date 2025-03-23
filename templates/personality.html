@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/personal.css">
+    <title>Personality Traits</title>
+
+    
+    
+</head>
+<body>
+    <style> body { border: inset 10px;margin:20px auto;width:70;height:700;text-align: center} </style>
+    <h2>Personality Traits!</h2>
+
+    <div class="wrapper">
+        <form action="{{url_for('personality')}}" method="POST">
+
+            <div class="result">{{msg}}</div>
+            
+            <div class="q1">
+                <h4>Q1: </h4>
+                Expend Energy, enjoy Groups or <input type ="radio" name ="q1" value="1"/><br>
+                Conserve energy, enjoy one-on-one <input type="radio" name="q1" value ="2"/><br><br>
+            </div>
+
+            <div class="q2">
+                <h4>Q2: </h4>
+                Seek many tasks, public activities, interaction with others or <input type ="radio" name ="q2" value="1"/><br>
+                Seek private, solitary activities with quiet to concentrate <input type="radio" name="q2" value ="2"/><br><br>
+            </div>
+
+            <div class="q3">
+                <h4>Q3: </h4>
+                More outgoing, think out loud or <input type ="radio" name ="q3" value="1"/><br>
+                More reserved, think to yourself <input type="radio" name="q3" value ="2"/><br><br>
+            </div>
+            
+            <div class="q4">
+                <h4>Q4: </h4>
+                External, communicative, express yourself or <input type ="radio" name ="q4" value="1"/><br>
+                Internal, reticent, keep to yourself <input type="radio" name="q4" value ="2"/><br><br>
+            </div>
+
+            <div class="q5">
+                <h4>Q5: </h4>
+                Active, initiate or <input type ="radio" name ="q5" value="1"/><br>
+                Reflective, deliberate<input type="radio" name="q5" value ="2"/><br><br>
+            </div>
+            
+            <div class="q6">
+                <h4>Q6: </h4>
+                Interpret literally or <input type ="radio" name ="q6" value="1"/><br>
+                look for meaning and possibilities<input type="radio" name="q6" value ="2"/><br><br>
+            </div>
+
+            <div class="q7">
+                <h4>Q7: </h4>
+                Practical, realistic, experiential or <input type ="radio" name ="q7" value="1"/><br>
+                Imaginative, innovative, theoretical<input type="radio" name="q7" value ="2"/><br><br>
+            </div>
+
+            <div class="q8">
+                <h4>Q8: </h4>
+                Standard, usual, conventional or <input type ="radio" name ="q8" value="1"/><br>
+                Different, novel, unique<input type="radio" name="q8" value ="2"/><br><br>
+            </div>
+
+            <div class="q9">
+                <h4>Q9: </h4>
+                Focus on here-and-now or <input type ="radio" name ="q9" value="1"/><br>
+                Look to the future, global perspective, “big picture” <input type="radio" name="q9" value ="2"/><br><br>
+            </div>
+
+            <div class="q10">
+                <h4>Q-10: </h4>
+                Facts, things, “what is” or <input type ="radio" name ="q10" value="1"/><br>
+                Ideas, dreams, “what could be,” philosophical<input type="radio" name="q10" value ="2"/><br><br>
+            </div>
+
+            <div class="q11">
+                <h4>Q-11: </h4>
+                Logical, thinking, questioning or<input type ="radio" name ="q11" value="1"/><br>
+                Empathetic, feeling, accommodating<input type="radio" name="q11" value ="2"/><br><br>
+            </div>
+
+            <div class="q12">
+                <h4>Q-12: </h4>
+                Candid, straight forward, frank or <input type ="radio" name ="q12" value="1"/><br>
+                Tactful, kind, encouraging<input type="radio" name="q12" value ="2"/><br><br>
+            </div>
+
+            <div class="q13">
+                <h4>Q-13: </h4>
+                Firm, tend to criticize, hold the line or <input type ="radio" name ="q13" value="1"/><br>
+                Gentle, tend to appreciate, conciliate<input type="radio" name="q13" value ="2"/><br><br>
+            </div>
+
+            <div class="q14">
+                <h4>Q-14: </h4>
+                Tough-minded, just or <input type ="radio" name ="q14" value="1"/><br>
+                Tender-hearted, merciful<input type="radio" name="q14" value ="2"/><br><br>
+            </div>
+
+            <div class="q15">
+                <h4>Q-15: </h4>
+                Matter of fact, issue-oriented or <input type ="radio" name ="q15" value="1"/><br>
+                Sensitive, people-oriented, compassionate<input type="radio" name="q15" value ="2"/><br><br>
+            </div>
+
+            <div class="q16">
+                <h4>Q-16: </h4>
+                Organized, orderly or <input type ="radio" name ="q16" value="1"/><br>
+                Flexible, adaptable<input type="radio" name="q16" value ="2"/><br><br>
+            </div>
+
+            <div class="q17">
+                <h4>Q-17: </h4>
+                Plan, schedule or<input type ="radio" name ="q17" value="1"/><br>
+                Unplanned, spontaneous<input type="radio" name="q17" value ="2"/><br><br>
+            </div>
+
+            <div class="q18">
+                <h4>Q-18: </h4>
+                Regulated, structured or <input type ="radio" name ="q18" value="1"/><br>
+                Easygoing, “live” and “let live”<input type="radio" name="q18" value ="2"/><br><br>
+            </div>
+
+            <div class="q19">
+                <h4>Q-19: </h4>
+                Preparation, plan ahead or<input type ="radio" name ="q19" value="1"/><br>
+                Go with the flow, adapt as you go<input type="radio" name="q19" value ="2"/><br><br>
+            </div>
+
+            <div class="q20">
+                <h4>Q-20: </h4>
+                Control, govern or <input type ="radio" name ="q20" value="1"/><br>
+                Latitude, freedom<input type="radio" name="q20" value ="2"/><br><br>
+            </div>
+            <input type="submit" name="submit" value="Go!">
+
+        </form>
+    </div>
+    <a href="{{url_for('about')}}">Home</a>
+</body>
+
+<script>
+
+    var q1 = document.getElementById("q1");
+    var q2 = document.getElementById("q2");
+    var q3 = document.getElementById("q3");
+    
+    function uncheck() {
+    var rad = document.getElementById('rd')
+    rad.removeAttribute('checked')
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const main = document.querySelector('body')
+    const toggleSwitch = document.querySelector('.slider')
+    
+    toggleSwitch.addEventListener('click', () => {
+    main.classList.toggle('dark-theme')
+    })
+    })
+
+
+    function showques2(){
+        q1.style.left = "-650px";
+        q2.style.left = "15px";
+    }
+
+    function showques3(){
+        q2.style.left = "-650px";
+        q3.style.left = "15px";
+    }
+
+    function backtoques2(){
+        q2.style.left = "15px";
+        q3.style.left = "650px";
+    }
+
+    function backtoques1(){
+        q1.style.left = "15px";
+        q2.style.left = "650px";
+    }
+    
+    function formsubmit(){
+        document.forms[0].submit();
+    }
+    </script>
+</html>

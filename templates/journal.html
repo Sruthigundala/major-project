@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/journel.css">
+
+    <title>Journal</title>
+</head>
+<body>
+    <h2>Journal</h2>
+    <div class="login-box">
+
+    <form action ="{{url_for('journal')}}" method="POST">
+        <div class = "msg">{{msg}}</div>
+
+        <div class="journal">
+            <textarea name="entry" rows="12" cols="40" placeholder="Enter text here...."></textarea>
+        </div>
+        <center>
+        <input type="submit" value="submit"/>
+    </form>
+    <a href="{{url_for('about')}}">Home</a></div></center>
+    </div>
+
+</body>
+</html>

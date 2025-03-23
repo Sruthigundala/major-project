@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Journal EntryLog  Of:  {{name}}</h1>
+<table>
+    <thead>
+        <tr>
+            <th>S.NO </th>
+            <th>DATE </th>
+            <th>ENTRY </th>
+            <th>CLASSIFICATION </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {%for row in data %}
+
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+        </tr>
+
+        {%endfor%}
+        
+    </tbody>
+</table>
+
+<a href="{{url_for('about')}}">Home</a>
+</body>
+</html>
+
+
